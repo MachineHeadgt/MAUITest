@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIAPIConsumer.Views.UserPage"
+             Title="{Binding TituloPagina}">
+    <VerticalStackLayout Padding="19">
+        <ActivityIndicator IsVisible="{Binding LoadingIsVisible}"
+                           IsRunning="{Binding LoadingIsVisible}"
+                           Color="Blue"
+                           HeightRequest="30"/>
+        <Entry Text="{Binding UserDTO.Name}" Placeholder="Name" />
+        <Entry Text="{Binding UserDTO.LastName}" Placeholder="Last Name" />
+        <Entry Text="{Binding UserDTO.Email}" Placeholder="Email" />
+        <Button Text="Add" Command="{Binding SaveCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
